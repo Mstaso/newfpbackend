@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_164344) do
   create_table "usercourses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
+    t.boolean "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

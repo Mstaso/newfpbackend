@@ -60,3 +60,5 @@ gem 'httparty', '~> 0.18.1'
 gem 'rest-client', '~> 2.1'
 
 gem 'pg'
+
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'

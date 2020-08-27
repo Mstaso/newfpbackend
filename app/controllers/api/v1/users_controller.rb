@@ -4,4 +4,5 @@ class Api::V1::UsersController < ApplicationController
         @users = User.all
         render json: @users, include: :courses, status: :ok
     end
+    
 end
