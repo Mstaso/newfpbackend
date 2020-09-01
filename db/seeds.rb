@@ -19,6 +19,7 @@ b2 = Business.create(name: "Capsule", industry:"HealthTech", logo:"https://res-4
 b3 = Business.create(name: "Gong", industry:"Tech", logo:"https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/l0xqrdyuetgvo4ycrglx", description:"Gong’s software automatically ingests and scans a user’s communications with customers—emails, phone calls or video chats—to detect who is ready to pitch for an upgrade, or at risk of closing their account. The time savings makes the Big Brother-like discomfort of being so closely tracked an easy tradeoff, says CEO Bendov. “It’s like having Google versus a human-curated directory,” he says. Bendov, 55, the former CEO of business-intelligence software startup SiSense, teamed up with Eilon Reshef, 48, who previously cofounded software firm WebCollage, to launch Gong in 2015. Some businesses have struggled during the spread of Covid-19 as workers stay home, but San Francisco-based Gong is benefiting. “Trends that we thought would take years, for people to work more remotely, are happening in weeks,” Bendov says." )
 b4 = Business.create(name: "Homebound", industry:"Tech", logo:"https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/wtwexvmgesefk9dcg527", description: "After devastating wildfires ripped through California’s wine country (where Abraham and Pechet each have homes) in 2017, the cofounders started Homebound in nearby Santa Rosa to help other homeowners rebuild—managing each step from building permits and insurance claims to design and construction. “As we watched people try to navigate the process and the complexity of everything they had to do to build a home, we knew there were really simple technology tools that were used in other industries that could make the process simpler,” says CEO Pechet, 38. Today Homebound is rebuilding 150 homes lost to fires." )
 b5 = Business.create(name: "Lyra Health", industry:"Health", logo:"https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/b3h5nhkglsrvuhhzg5tw", description: "About 50 million people suffer from mental health issues every year in the United States, but the biggest hurdle isn’t treatment—it’s access. Ebersman, 50, left his job as Facebook’s chief financial officer in 2014 to tackle the problem. Lyra’s solution: Help companies offer mental-health benefits to their employees. Some 40 companies have jumped on board, including eBay, Pinterest and Starbucks, giving more than a million people access to Lyra’s 3,000 therapists, coaches and physicians. Now the coronavirus is further stressing Americans and putting a spotlight on mental health. The Burlingame, California-based company expects revenue to double this year, to $100 million. “Today more than ever, companies are aware this is an important part of the puzzle,” Ebersman says. " )
+b6 = Business.create(name: "SmartRent", industry:"Tech", logo:"https://mms.businesswire.com/media/20190619005398/en/728572/21/SmartRent_Logo.jpg", description: "SmartRent brings smart home technology, such as smart locks and thermostats, to multifamily properties. The Scottsdale, Arizona, startup charges up to $1,000 for installation and hardware, plus $5 to $10 a month. The smart locks let potential tenants take private, self-guided tours of vacant apartments, a service expected to be particularly important during the pandemic. SmartRent has partnered with nearly 100 owners, including Essex Property Trust (also an investor) to get its home-tech in 90,000 units—with a goal to hit 300,000 by year-end. CEO Haldeman, 42, was previously chief technology officer at Colony Starwood Homes (now Invitation Homes) and knows the pain property owners face. “We’re really operators,” he says. “We aren’t tech guys; we’re not in the Bay Area.” " )
     Course.delete_all
 
 def courses
@@ -27,7 +28,7 @@ def courses
 
     if !json.nil?
         json["elements"].map do |course|
-            Course.create(name: course["name"], category: course["domainTypes"][0]["domainId"], image: course["photoUrl"])
+            Course.create(name: course["name"], category: course["domainTypes"][0]["domainId"], image: course["photoUrl"], description: course["description"])
         end
     else
         puts "error seeding courses"
@@ -36,15 +37,15 @@ end
 
 courses
 
-uc1 = Usercourse.create(user_id: 1, course_id: Course.all.sample.id, status: false)
-uc2 = Usercourse.create(user_id: 1, course_id: Course.all.sample.id, status: false)
-uc1 = Usercourse.create(user_id: 1, course_id: Course.all.sample.id, status: false)
-uc2 = Usercourse.create(user_id: 1, course_id: Course.all.sample.id, status: false)
-uc1 = Usercourse.create(user_id: 2, course_id: Course.all.sample.id, status: false)
-uc2 = Usercourse.create(user_id: 2, course_id: Course.all.sample.id, status: false)
-uc1 = Usercourse.create(user_id: 3, course_id: Course.all.sample.id, status: false)
-uc2 = Usercourse.create(user_id: 3, course_id: Course.all.sample.id, status: false)
-uc2 = Usercourse.create(user_id: 3, course_id: Course.all.sample.id, status: false)
+uc1 = UserCourse.create(user_id: 1, course_id: Course.all.sample.id, complete: false)
+uc2 = UserCourse.create(user_id: 1, course_id: Course.all.sample.id, complete: false)
+uc1 = UserCourse.create(user_id: 1, course_id: Course.all.sample.id, complete: false)
+uc2 = UserCourse.create(user_id: 1, course_id: Course.all.sample.id, complete: false)
+uc1 = UserCourse.create(user_id: 2, course_id: Course.all.sample.id, complete: false)
+uc2 = UserCourse.create(user_id: 2, course_id: Course.all.sample.id, complete: false)
+uc1 = UserCourse.create(user_id: 3, course_id: Course.all.sample.id, complete: false)
+uc2 = UserCourse.create(user_id: 3, course_id: Course.all.sample.id, complete: false)
+uc2 = UserCourse.create(user_id: 3, course_id: Course.all.sample.id, complete: false)
 
 Businesscourse.create(business_id: 1, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 1, course_id: Course.all.sample.id)
@@ -66,3 +67,7 @@ Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
+Businesscourse.create(business_id: 6, course_id: Course.all.sample.id)
+
+
+Match.create(business_id: Business.all.sample.id, user_id: User.all.sample.id, status: false)

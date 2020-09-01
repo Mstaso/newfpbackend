@@ -5,6 +5,7 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.string :image
       t.integer :rating
       t.string :category
+      t.string :description
       t.string :link
 
       t.timestamps

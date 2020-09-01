@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_164344) do
+ActiveRecord::Schema.define(version: 2020_08_31_154823) do
 
   create_table "businesscourses", force: :cascade do |t|
     t.integer "business_id"
@@ -34,15 +34,24 @@ ActiveRecord::Schema.define(version: 2020_08_25_164344) do
     t.string "image"
     t.integer "rating"
     t.string "category"
+    t.string "description"
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "usercourses", force: :cascade do |t|
+  create_table "matches", force: :cascade do |t|
+    t.integer "business_id"
+    t.integer "user_id"
+    t.boolean "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_courses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
-    t.boolean "status"
+    t.boolean "complete"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

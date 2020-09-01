@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
 
     def index
         @users = User.all
-        render json: @users, include: :courses, status: :ok
+        render json: @users, include: [:courses, :user_courses, :businesses], status: :ok
     end
 
     def create
