@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
   create_table "matches", force: :cascade do |t|
     t.integer "business_id"
     t.integer "user_id"
-    t.boolean "status"
+    t.integer "match_percentage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
     t.integer "user_id"
     t.integer "course_id"
     t.boolean "complete"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

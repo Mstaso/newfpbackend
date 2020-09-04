@@ -3,7 +3,8 @@ class CreateUserCourses < ActiveRecord::Migration[6.0]
     create_table :user_courses do |t|
       t.integer :user_id
       t.integer :course_id
-      t.boolean :complete   
+      t.boolean :complete
+      t.string :name   
 
       t.timestamps
     end

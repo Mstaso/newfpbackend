@@ -68,6 +68,3 @@ Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 5, course_id: Course.all.sample.id)
 Businesscourse.create(business_id: 6, course_id: Course.all.sample.id)
-
-
-Match.create(business_id: Business.all.sample.id, user_id: User.all.sample.id, status: false)
