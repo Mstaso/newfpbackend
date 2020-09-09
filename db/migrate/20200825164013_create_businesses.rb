@@ -5,7 +5,8 @@ class CreateBusinesses < ActiveRecord::Migration[6.0]
       t.string :industry
       t.string :logo
       t.string :description
-      t.string :link
+      t.string :cover_photo
+      t.string :job
 
       t.timestamps
     end

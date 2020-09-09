@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
     t.string "industry"
     t.string "logo"
     t.string "description"
-    t.string "link"
+    t.string "cover_photo"
+    t.string "job"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
     t.integer "rating"
     t.string "category"
     t.string "description"
+    t.string "cover_photo"
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -52,6 +54,8 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
     t.integer "business_id"
     t.integer "user_id"
     t.integer "match_percentage"
+    t.string "business_name"
+    t.string "user_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -69,6 +73,11 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
+    t.string "github"
+    t.string "linkedin"
+    t.string "description"
+    t.string "profile_image"
+    t.string "cover_photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
