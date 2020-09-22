@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+You may need to install
+axios npm i axios --save and also react-paginate npm i react-paginate --save.

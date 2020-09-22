@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 2020_09_01_230928) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "image"
-    t.integer "rating"
+    t.string "workload"
     t.string "category"
+    t.string "subcategory"
     t.string "description"
     t.string "cover_photo"
-    t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

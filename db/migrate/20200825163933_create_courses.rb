@@ -3,11 +3,12 @@ class CreateCourses < ActiveRecord::Migration[6.0]
     create_table :courses do |t|
       t.string :name
       t.string :image
-      t.integer :rating
+      t.string :workload
       t.string :category
+      t.string :subcategory
       t.string :description
       t.string :cover_photo
-      t.string :link
+      
 
       t.timestamps
     end
