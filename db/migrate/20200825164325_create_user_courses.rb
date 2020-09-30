@@ -4,7 +4,7 @@ class CreateUserCourses < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :course_id
       t.boolean :complete
-      t.string :name   
+      t.text :name   
 
       t.timestamps
     end

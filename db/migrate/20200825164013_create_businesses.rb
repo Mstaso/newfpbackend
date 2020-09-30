@@ -1,12 +1,12 @@
 class CreateBusinesses < ActiveRecord::Migration[6.0]
   def change
     create_table :businesses do |t|
-      t.string :name
-      t.string :industry
-      t.string :logo
-      t.string :description
-      t.string :cover_photo
-      t.string :job
+      t.text :name
+      t.text :industry
+      t.text :logo
+      t.text :description
+      t.text :cover_photo
+      t.text :job
 
       t.timestamps
     end

@@ -4,8 +4,8 @@ class CreateMatches < ActiveRecord::Migration[6.0]
       t.integer :business_id
       t.integer :user_id
       t.integer :match_percentage
-      t.string :business_name
-      t.string :user_name
+      t.text :business_name
+      t.text :user_name
          
       t.timestamps
     end
