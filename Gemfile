@@ -64,3 +64,8 @@ gem 'rest-client', '~> 2.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'fast_jsonapi'
+
+gem 'bcrypt'
+
+gem 'knock'
+gem "jwt", "~> 1.5"

@@ -1,4 +1,5 @@
 class Api::V1::UserCoursesController < ApplicationController
+    skip_before_action :authorized
 
     def index
         @usercourses = UserCourse.all
