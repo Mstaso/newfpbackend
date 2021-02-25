@@ -4,8 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.text :username
       t.text :password_digest
       t.text :email
-      t.text :github
-      t.text :linkedin
+      t.text :title
       t.text :description
       t.text :profile_image
       t.text :cover_photo
