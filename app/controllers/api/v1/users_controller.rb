@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
     skip_before_action :authorized
 
     def profile
-      render json: { user: current_user}, include: :user_courses, status: :accepted
+      render json: { user: current_user}, include: [:user_courses, :courses], status: :accepted
     end
   
     def index
@@ -19,7 +19,7 @@ class Api::V1::UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.valid?
           @token = encode_token(user_id: @user.id)
-          render json: { user: @user, jwt: @token }, include: :user_courses, status: :created
+          render json: { user: @user, jwt: @token }, include: [:user_courses, :courses, :businesses], status: :created
         else
           render json: { error: 'failed to create user' }, status: :not_acceptable
         end
