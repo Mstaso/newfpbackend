@@ -62,7 +62,9 @@ gem 'httparty', '~> 0.18.1'
 
 gem 'rest-client', '~> 2.1'
 
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'faker'
+
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'fast_jsonapi'
 
