@@ -72,3 +72,5 @@ gem 'bcrypt'
 
 gem 'knock'
 gem "jwt", "~> 1.5"
+
+gem 'react-rails'
